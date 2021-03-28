@@ -6,4 +6,4 @@ before_install:
   - docker build -t tussera/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run tussera/docker-react npm run test -- --coverage
+  - docker run -e CI=true tussera/docker-react npm run test
